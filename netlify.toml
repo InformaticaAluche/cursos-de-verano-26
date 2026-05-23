@@ -1,8 +1,6 @@
-  [build]
+[build]
   publish = "."
-  command = "npm run build"
 
 [[webhooks]]
   event = "submission_created"
   url = "https://hooks.zapier.com/hooks/catch/27697500/4oqy5gt/"
-
