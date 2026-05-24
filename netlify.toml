@@ -1,8 +1,7 @@
 [build]
   publish = "/"
 
-[[plugins]]
-package = "netlify-plugin-webhook"
-
-  [plugins.inputs]
-  webhook_url = "https://hooks.zapier.com/hooks/catch/27697500/4oqy5gt/"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
