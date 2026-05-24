@@ -196,10 +196,11 @@
 <form 
     name="contacto" 
     method="POST" 
-    action="https://hooks.zapier.com/hooks/catch/27697500/4oqy5gt/"
+    data-netlify="true"
+    action="/gracias.html"
 >
-    <!-- Redirección a la página de gracias -->
-    <input type="hidden" name="redirect_to" value="https://cursos-verano.netlify.app/gracias.html">
+    <!-- Campo obligatorio para Netlify Forms -->
+    <input type="hidden" name="form-name" value="contacto">
 
     <!-- Campos del formulario -->
     <input type="text" name="nombre" placeholder="Nombre del alumno" required>
@@ -222,6 +223,7 @@
 
     <button type="submit">Solicitar información</button>
 </form>
+
 
     </div>
 
