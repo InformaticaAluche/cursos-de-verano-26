@@ -3,133 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursos de Verano Informática Junior</title>
+<title>Cursos de Verano – Informática Aluche</title>
 
 <style>
     body {
         font-family: Arial, sans-serif;
+        background: #f0f6ff;
         margin: 0;
         padding: 0;
-        background: linear-gradient(180deg, #f0f6ff, #ffffff);
-        color: #333;
-        line-height: 1.5;
+        color: #1a4f8b;
+        text-align: center;
     }
 
     header {
-        text-align: center;
-        padding: 25px 15px 10px;
-        background: linear-gradient(135deg, #d4e6ff, #e8f2ff);
-        border-bottom: 1px solid #d0dff5;
+        padding: 30px 20px;
     }
 
     h1 {
-        margin: 0;
-        font-size: 1.9rem;
-        color: #1a4f8b;
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
-    h2 {
-        font-size: 1rem;
-        margin-top: 8px;
-        color: #3a3a3a;
-    }
-
-    .contenedor {
-        width: 92%;
-        max-width: 900px;
-        margin: auto;
-        padding: 25px 0;
-    }
-
-    .grid-cursos {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
-        margin-top: 15px;
-    }
-
-    @media (min-width: 600px) {
-        .grid-cursos {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    .curso {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .curso img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 8px;
-        background: #eef3ff;
-    }
-
-    .curso h3 {
-        margin: 0;
+    p.subtitulo {
         font-size: 1.1rem;
-        color: #1a4f8b;
-    }
-
-    .precio {
-        color: #1a4f8b;
-        font-weight: bold;
-        margin: 3px 0 8px;
-        font-size: 0.95rem;
-    }
-
-    .bloque {
-        background: white;
-        padding: 18px;
-        border-radius: 10px;
-        margin-top: 25px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        font-size: 0.95rem;
+        margin-bottom: 25px;
     }
 
     form {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 15px;
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
+        background: white;
+        padding: 25px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 420px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    input, select {
-        padding: 8px;
+    input, select, button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
         border-radius: 6px;
-        border: 1px solid #bbb;
-        font-size: 0.9rem;
+        border: 1px solid #ccc;
+        font-size: 1rem;
     }
 
     button {
-        padding: 12px;
         background: #1a4f8b;
         color: white;
         border: none;
-        border-radius: 6px;
-        font-size: 1rem;
         cursor: pointer;
-        transition: 0.3s;
     }
 
     button:hover {
         background: #163f70;
     }
 
-    .cta-final {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 1.2rem;
-        font-weight: bold;
+    footer a {
         color: #1a4f8b;
+        text-decoration: none;
+        margin: 0 10px;
     }
 </style>
 </head>
@@ -137,62 +70,11 @@
 <body>
 
 <header>
-    <h1>Cursos de Verano de Informática Junior</h1>
-    <h2>Aprendizaje práctico para que tus hijos afronten el próximo curso con soltura digital y más seguridad.</h2>
+    <h1>Cursos de Verano 2026</h1>
+    <p class="subtitulo">Ofimática, Mecanografía y Diseño para niños y jóvenes</p>
 </header>
 
-<div class="contenedor">
-
-    <h2 style="text-align:center; color:#1a4f8b; margin-bottom:10px;">Cursos disponibles</h2>
-
-    <div class="grid-cursos">
-
-        <!-- OFIMÁTICA EDUCATIVA -->
-        <div class="curso">
-            <img src="" alt="Imagen Ofimática Educativa">
-            <h3>Ofimática Educativa</h3>
-            <p class="precio">199 € · 20 h</p>
-            <p>Word, PowerPoint y herramientas básicas para trabajos escolares.</p>
-        </div>
-
-        <!-- MECANOGRAFÍA -->
-        <div class="curso">
-            <img src="" alt="Imagen Mecanografía">
-            <h3>Mecanografía en Ordenador</h3>
-            <p class="precio">199 € · 20 h</p>
-            <p>Escritura rápida y correcta sin mirar el teclado.</p>
-        </div>
-
-        <!-- OFIMÁTICA + MECANOGRAFÍA -->
-        <div class="curso">
-            <img src="" alt="Imagen Ofimática + Mecanografía">
-            <h3>Ofimática + Mecanografía</h3>
-            <p class="precio">199 € · 20 h</p>
-            <p>El pack más completo para avanzar en autonomía digital.</p>
-        </div>
-
-        <!-- DISEÑO CANVA / POWERPOINT -->
-        <div class="curso">
-            <img src="" alt="Imagen Diseño Canva / PowerPoint">
-            <h3>Diseño Canva / PowerPoint</h3>
-            <p class="precio">199 € · 20 h</p>
-            <p>Creatividad aplicada: portadas, carteles y presentaciones visuales.</p>
-        </div>
-
-    </div>
-
-    <div class="bloque">
-        <p>
-            Hoy en día, dominar lo básico del ordenador es tan importante como leer o escribir.
-            Estos cursos permiten que tus hijos empiecen el próximo curso
-            <strong>más preparados, más seguros y con más autonomía.</strong>
-        </p>
-    </div>
-
-    <div class="bloque">
-        <h3 style="color:#1a4f8b; text-align:center;">Formulario de inscripción</h3>
-
-   <form action="https://api.staticforms.dev/submit" method="POST">
+<form action="https://api.staticforms.dev/submit" method="POST">
     <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
     <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
 
@@ -215,32 +97,24 @@
         <option value="Sábados por la mañana">Sábados por la mañana</option>
     </select>
 
-    <label style="font-size:0.85rem; line-height:1.3;">
+    <label style="font-size:0.85rem; line-height:1.3; text-align:left; display:block;">
       <input type="checkbox" name="consentimiento" required>
       Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
     </label>
 
-    <p style="font-size:0.8rem; color:#555; margin-top:-5px;">
+    <p style="font-size:0.8rem; color:#555; margin-top:-5px; text-align:left;">
       Tus datos se usarán únicamente para enviarte información sobre los cursos y confirmar tu plaza.
     </p>
 
     <button type="submit">Solicitar información</button>
 </form>
 
-
-    </div>
-
-    <div class="bloque">
-        <p>
-            Más de 300 alumnos han pasado por nuestros cursos durante el año.
-            Padres y madres destacan que sus hijos vuelven al colegio
-            <strong>más seguros, más rápidos y más organizados.</strong>
-        </p>
-    </div>
-
-    <p class="cta-final">Reserva la plaza hoy mismo y garantiza su sitio en el grupo de verano.</p>
-
-</div>
+<footer style="text-align:center; padding:20px; margin-top:40px; font-size:0.85rem; color:#555;">
+    <a href="https://www.informaticaaluche.com/accesibilidad/">Accesibilidad</a>
+    <a href="https://www.informaticaaluche.com/aviso-legal/">Aviso legal</a>
+    <a href="https://www.informaticaaluche.com/politica-privacidad/">Política de privacidad</a>
+    <a href="https://www.informaticaaluche.com/politica-de-cookies/">Política de cookies</a>
+</footer>
 
 </body>
 </html>
