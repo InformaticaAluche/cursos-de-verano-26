@@ -191,18 +191,14 @@
 
     <div class="bloque">
         <h3 style="color:#1a4f8b; text-align:center;">Formulario de inscripción</h3>
-
-
 <form action="https://api.staticforms.dev/submit" method="POST">
-    <!-- Tu clave personal de StaticForms -->
     <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
 
-    <!-- Redirección después de enviar -->
-    <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-verano/gracias.html">
+    <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
 
-    <!-- Campos del formulario -->
     <input type="text" name="nombre" placeholder="Nombre del alumno" required>
     <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
+    <input type="email" name="email" placeholder="Email del padre/madre" required>
 
     <select name="curso" required>
         <option value="">Curso de interés</option>
@@ -221,9 +217,6 @@
 
     <button type="submit">Solicitar información</button>
 </form>
-
-
-
 
 
     </div>
