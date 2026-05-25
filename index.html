@@ -29,11 +29,22 @@
         margin-bottom: 25px;
     }
 
-    /* ⭐ Ajuste clave para que las 4 tarjetas entren en una línea */
+    /* ⭐ Ajuste para que las imágenes no rompan el grid */
     .grid-cursos img {
         max-width: 180px;
         margin: 0 auto;
         display: block;
+    }
+
+    /* ⭐ Formulario en 2 columnas */
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .form-grid-full {
+        grid-column: span 2;
     }
 
     form {
@@ -41,15 +52,15 @@
         padding: 25px;
         margin: 0 auto;
         width: 90%;
-        max-width: 420px;
+        max-width: 500px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: left;
     }
 
     input, select, button {
         width: 100%;
         padding: 12px;
-        margin-bottom: 15px;
         border-radius: 6px;
         border: 1px solid #ccc;
         font-size: 1rem;
@@ -60,6 +71,8 @@
         color: white;
         border: none;
         cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
     }
 
     button:hover {
@@ -90,20 +103,20 @@
     max-width:1200px;
 ">
 
-    <!-- Mecanografía -->
-    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-        <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
-        <h3>Mecanografía en Ordenador</h3>
-        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
-        <p>Escritura rápida y correcta sin mirar el teclado.</p>
-    </div>
-
     <!-- Ofimática Educativa -->
     <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
         <img src="images/ofimatica.png" alt="Ofimática Educativa">
         <h3>Ofimática Educativa</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>Word, PowerPoint y herramientas básicas para trabajos escolares.</p>
+    </div>
+
+    <!-- Mecanografía -->
+    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
+        <h3>Mecanografía en Ordenador</h3>
+        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
+        <p>Escritura rápida y correcta sin mirar el teclado.</p>
     </div>
 
     <!-- Ofimática + Mecanografía -->
@@ -129,35 +142,51 @@
     <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
     <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
 
-    <input type="text" name="nombre" placeholder="Nombre del alumno" required>
-    <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
-    <input type="email" name="email" placeholder="Email del padre/madre" required>
+    <div class="form-grid">
 
-    <select name="curso" required>
-        <option value="">Curso de interés</option>
-        <option value="Ofimática Educativa">Ofimática Educativa</option>
-        <option value="Mecanografía">Mecanografía</option>
-        <option value="Ofimática + Mecanografía">Ofimática + Mecanografía</option>
-        <option value="Diseño Canva/PowerPoint">Diseño Canva/PowerPoint</option>
-    </select>
+        <div>
+            <input type="text" name="nombre" placeholder="Nombre del alumno" required>
+        </div>
 
-    <select name="horario" required>
-        <option value="">Horario preferido</option>
-        <option value="Mañanas">Mañanas</option>
-        <option value="Tardes">Tardes</option>
-        <option value="Sábados por la mañana">Sábados por la mañana</option>
-    </select>
+        <div>
+            <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
+        </div>
 
-    <label style="font-size:0.85rem; line-height:1.3; text-align:left; display:block;">
-      <input type="checkbox" name="consentimiento" required>
-      Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
-    </label>
+        <div>
+            <input type="email" name="email" placeholder="Email del padre/madre" required>
+        </div>
 
-    <p style="font-size:0.8rem; color:#555; margin-top:-5px; text-align:left;">
-      Tus datos se usarán únicamente para enviarte información sobre los cursos y confirmar tu plaza.
-    </p>
+        <div>
+            <select name="curso" required>
+                <option value="">Curso de interés</option>
+                <option value="Ofimática Educativa">Ofimática Educativa</option>
+                <option value="Mecanografía">Mecanografía</option>
+                <option value="Ofimática + Mecanografía">Ofimática + Mecanografía</option>
+                <option value="Diseño Canva/PowerPoint">Diseño Canva/PowerPoint</option>
+            </select>
+        </div>
 
-    <button type="submit">Solicitar información</button>
+        <div class="form-grid-full">
+            <select name="horario" required>
+                <option value="">Horario preferido</option>
+                <option value="Mañanas">Mañanas</option>
+                <option value="Tardes">Tardes</option>
+                <option value="Sábados por la mañana">Sábados por la mañana</option>
+            </select>
+        </div>
+
+        <div class="form-grid-full">
+            <label style="font-size:0.85rem; line-height:1.3;">
+                <input type="checkbox" name="consentimiento" required>
+                Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
+            </label>
+        </div>
+
+        <div class="form-grid-full">
+            <button type="submit">Solicitar información</button>
+        </div>
+
+    </div>
 </form>
 
 <footer style="text-align:center; padding:20px; margin-top:40px; font-size:0.85rem; color:#555;">
