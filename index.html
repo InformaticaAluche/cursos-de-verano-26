@@ -193,16 +193,13 @@
         <h3 style="color:#1a4f8b; text-align:center;">Formulario de inscripción</h3>
 
 
-<form 
-    name="contacto" 
-    method="POST" 
-    data-netlify="true"
-    action="/gracias.html"
->
-    <!-- Campo obligatorio para Netlify Forms -->
-    <input type="hidden" name="form-name" value="contacto">
+<form action="https://formsubmit.co/TU_EMAIL" method="POST">
+    <!-- Redirección después de enviar -->
+    <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/cursos-verano/gracias.html">
 
-    <!-- Campos del formulario -->
+    <!-- Evitar spam -->
+    <input type="hidden" name="_captcha" value="false">
+
     <input type="text" name="nombre" placeholder="Nombre del alumno" required>
     <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
 
@@ -223,6 +220,7 @@
 
     <button type="submit">Solicitar información</button>
 </form>
+
 
 
     </div>
