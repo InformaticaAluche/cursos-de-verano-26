@@ -191,9 +191,9 @@
 
     <div class="bloque">
         <h3 style="color:#1a4f8b; text-align:center;">Formulario de inscripción</h3>
-<form action="https://api.staticforms.dev/submit" method="POST">
-    <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
 
+   <form action="https://api.staticforms.dev/submit" method="POST">
+    <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
     <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
 
     <input type="text" name="nombre" placeholder="Nombre del alumno" required>
@@ -214,6 +214,15 @@
         <option value="Tardes">Tardes</option>
         <option value="Sábados por la mañana">Sábados por la mañana</option>
     </select>
+
+    <label style="font-size:0.85rem; line-height:1.3;">
+      <input type="checkbox" name="consentimiento" required>
+      Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
+    </label>
+
+    <p style="font-size:0.8rem; color:#555; margin-top:-5px;">
+      Tus datos se usarán únicamente para enviarte información sobre los cursos y confirmar tu plaza.
+    </p>
 
     <button type="submit">Solicitar información</button>
 </form>
