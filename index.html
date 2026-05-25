@@ -193,13 +193,14 @@
         <h3 style="color:#1a4f8b; text-align:center;">Formulario de inscripción</h3>
 
 
-<form action="https://formsubmit.co/TU_EMAIL" method="POST">
+<form action="https://formspree.io/f/TU_CODIGO" method="POST">
     <!-- Redirección después de enviar -->
-    <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/cursos-verano/gracias.html">
+    <input type="hidden" name="_redirect" value="https://TU-USUARIO.github.io/cursos-verano/gracias.html">
 
-    <!-- Evitar spam -->
+    <!-- Evitar captcha de Formspree -->
     <input type="hidden" name="_captcha" value="false">
 
+    <!-- Campos del formulario -->
     <input type="text" name="nombre" placeholder="Nombre del alumno" required>
     <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
 
@@ -220,6 +221,7 @@
 
     <button type="submit">Solicitar información</button>
 </form>
+
 
 
 
