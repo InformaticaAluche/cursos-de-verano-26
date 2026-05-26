@@ -13,7 +13,7 @@
         padding: 0;
         color: #1a4f8b;
         text-align: center;
-        scroll-behavior: smooth; /* ⭐ Scroll suave */
+        scroll-behavior: smooth;
     }
 
     header {
@@ -109,9 +109,10 @@
         position: relative;
     }
 
+    /* ⭐ PADDING CORREGIDO PARA QUE NO SE TAPE LA PRIMERA LETRA */
     .form-item input,
     .form-item select {
-        padding-left: 40px;
+        padding-left: 52px; /* antes 40px */
         width: 100%;
         padding: 12px;
         border-radius: 6px;
@@ -121,7 +122,7 @@
 
     .icon {
         position: absolute;
-        left: 10px;
+        left: 8px; /* antes 10px */
         top: 50%;
         transform: translateY(-50%);
     }
