@@ -53,7 +53,6 @@
         width: 100%;
     }
 
-    /* Botón llamada */
     .btn-call {
         width: 65px;
         height: 65px;
@@ -68,7 +67,6 @@
         font-weight: bold;
     }
 
-    /* Botón WhatsApp */
     .btn-w {
         width: 65px;
         height: 65px;
@@ -85,11 +83,17 @@
         height: 32px;
     }
 
-    /* ⭐ IMÁGENES REDONDEADAS (excepto la primera) */
-    .img-rounded {
+    /* ⭐ TODAS LAS IMÁGENES IGUALES */
+    .curso img {
+        max-width: 160px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+
         border: 3px solid #1a4f8b;
         border-radius: 12px;
         padding: 3px;
+        box-sizing: border-box;
     }
 
     /* ⭐ GRID RESPONSIVE */
@@ -121,13 +125,6 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         width: 100%;
-    }
-
-    .grid-cursos img {
-        max-width: 160px;
-        width: 100%;
-        margin: 0 auto;
-        display: block;
     }
 
     /* ⭐ FORMULARIO */
@@ -200,7 +197,6 @@
     <h1>Cursos de Verano 2026</h1>
     <p class="subtitulo">Ofimática, Mecanografía y Diseño para niños y jóvenes</p>
 
-    <!-- ⭐ BOTONERA DOBLE -->
     <div class="botonera-doble">
         <a href="tel:+34TU_NUMERO" class="btn-call">📞</a>
 
@@ -212,10 +208,8 @@
     </div>
 </header>
 
-<!-- ⭐ TARJETAS DE CURSOS -->
 <div class="grid-cursos">
 
-    <!-- Primera imagen SIN borde -->
     <div class="curso">
         <img src="images/ofimatica.png" alt="Ofimática Educativa">
         <h3>Ofimática Educativa</h3>
@@ -223,23 +217,22 @@
         <p>Word, PowerPoint y herramientas básicas para trabajos escolares.</p>
     </div>
 
-    <!-- Las demás imágenes CON borde -->
     <div class="curso">
-        <img src="images/mecasoft.png" alt="Mecanografía en ordenador" class="img-rounded">
+        <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
         <h3>Mecanografía en Ordenador</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>Escritura rápida y correcta sin mirar el teclado.</p>
     </div>
 
     <div class="curso">
-        <img src="images/ofimatica_meca.png" alt="Ofimática + Mecanografía" class="img-rounded">
+        <img src="images/ofimatica_meca.png" alt="Ofimática + Mecanografía">
         <h3>Ofimática + Mecanografía</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>El pack más completo para avanzar en autonomía digital.</p>
     </div>
 
     <div class="curso">
-        <img src="images/ofimatica_canva.png" alt="Diseño Canva y PowerPoint" class="img-rounded">
+        <img src="images/canva_power.png" alt="Diseño Canva y PowerPoint">
         <h3>Diseño Canva / PowerPoint</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>Creatividad aplicada: portadas, carteles y presentaciones visuales.</p>
@@ -247,7 +240,6 @@
 
 </div>
 
-<!-- ⭐ FORMULARIO -->
 <form id="formulario" action="https://api.staticforms.dev/submit" method="POST">
     <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
     <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
