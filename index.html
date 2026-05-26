@@ -29,11 +29,11 @@
         margin-bottom: 8px;
     }
 
-    /* ⭐ GRID RESPONSIVE */
+    /* ⭐ GRID RESPONSIVE + MARGEN CORREGIDO */
     .grid-cursos {
         display: grid;
         gap: 20px;
-        margin: 40px auto;
+        margin: 10px auto; /* antes 40px */
         max-width: 1200px;
         grid-template-columns: repeat(4, 1fr);
     }
@@ -47,6 +47,7 @@
     @media (max-width: 600px) {
         .grid-cursos {
             grid-template-columns: 1fr;
+            margin: 5px auto; /* aún más compacto en móvil */
         }
     }
 
