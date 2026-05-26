@@ -6,6 +6,15 @@
 <title>Cursos de Verano – Informática Aluche</title>
 
 <style>
+    /* ⭐ Corrección global: evita scroll lateral y desbordes */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         font-family: Arial, sans-serif;
         background: #f0f6ff;
@@ -55,7 +64,7 @@
         }
     }
 
-    /* ⭐ GRID RESPONSIVE + MARGEN CORREGIDO */
+    /* ⭐ GRID RESPONSIVE */
     .grid-cursos {
         display: grid;
         gap: 20px;
@@ -109,10 +118,10 @@
         position: relative;
     }
 
-    /* ⭐ PADDING + ICONOS CORREGIDOS */
+    /* ⭐ Inputs corregidos: padding + tamaño fijo */
     .form-item input,
     .form-item select {
-        padding-left: 50px;
+        padding-left: 52px;
         width: 100%;
         padding: 12px;
         border-radius: 6px;
@@ -120,6 +129,7 @@
         font-size: 1rem;
     }
 
+    /* ⭐ Iconos corregidos: tamaño fijo + centrado */
     .icon {
         position: absolute;
         left: 8px;
@@ -183,7 +193,6 @@
 <!-- ⭐ TARJETAS DE CURSOS -->
 <div class="grid-cursos">
 
-    <!-- Ofimática Educativa -->
     <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
         <img src="images/ofimatica.png" alt="Ofimática Educativa">
         <h3>Ofimática Educativa</h3>
@@ -191,7 +200,6 @@
         <p>Word, PowerPoint y herramientas básicas para trabajos escolares.</p>
     </div>
 
-    <!-- Mecanografía -->
     <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
         <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
         <h3>Mecanografía en Ordenador</h3>
@@ -199,7 +207,6 @@
         <p>Escritura rápida y correcta sin mirar el teclado.</p>
     </div>
 
-    <!-- Ofimática + Mecanografía -->
     <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
         <img src="images/ofimatica_meca.png" alt="Ofimática + Mecanografía">
         <h3>Ofimática + Mecanografía</h3>
@@ -207,7 +214,6 @@
         <p>El pack más completo para avanzar en autonomía digital.</p>
     </div>
 
-    <!-- Diseño Canva / PowerPoint -->
     <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
         <img src="images/ofimatica_canva.png" alt="Diseño Canva y PowerPoint">
         <h3>Diseño Canva / PowerPoint</h3>
@@ -216,9 +222,8 @@
     </div>
 
 </div>
-<!-- ⭐ FIN TARJETAS -->
 
-<!-- ⭐ FORMULARIO OPTIMIZADO PARA MÓVIL -->
+<!-- ⭐ FORMULARIO -->
 <form id="formulario" action="https://api.staticforms.dev/submit" method="POST">
     <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
     <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
@@ -228,7 +233,10 @@
         <!-- Nombre -->
         <div class="form-item">
             <span class="icon">
-                <svg fill="#1a4f8b"><circle cx="10" cy="6" r="4"/><path d="M2 18c0-4 3-7 8-7s8 3 8 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="#1a4f8b">
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>
+                </svg>
             </span>
             <input type="text" name="nombre" placeholder="Nombre del alumno" required>
         </div>
@@ -236,7 +244,10 @@
         <!-- Teléfono -->
         <div class="form-item">
             <span class="icon">
-                <svg fill="#1a4f8b"><path d="M6 2h8v16H6z"/><path d="M8 18h4v2H8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#1a4f8b">
+                    <rect x="7" y="2" width="10" height="20" rx="2"/>
+                    <rect x="10" y="18" width="4" height="2"/>
+                </svg>
             </span>
             <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
         </div>
@@ -244,7 +255,10 @@
         <!-- Email -->
         <div class="form-item">
             <span class="icon">
-                <svg fill="#1a4f8b"><path d="M2 4h18v14H2z"/><path d="M2 4l9 7 9-7"/></svg>
+                <svg viewBox="0 0 24 24" fill="#1a4f8b">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M2 4l10 8 10-8"/>
+                </svg>
             </span>
             <input type="email" name="email" placeholder="Email del padre/madre" required>
         </div>
@@ -252,7 +266,10 @@
         <!-- Curso -->
         <div class="form-item">
             <span class="icon">
-                <svg fill="#1a4f8b"><path d="M2 6l9-4 9 4-9 4z"/><path d="M4 8v6l7 4 7-4V8"/></svg>
+                <svg viewBox="0 0 24 24" fill="#1a4f8b">
+                    <path d="M2 7l10-4 10 4-10 4z"/>
+                    <path d="M4 10v6l8 4 8-4v-6"/>
+                </svg>
             </span>
             <select name="curso" required>
                 <option value="">Curso de interés</option>
@@ -266,7 +283,10 @@
         <!-- Horario -->
         <div class="form-item form-grid-full">
             <span class="icon">
-                <svg fill="#1a4f8b"><circle cx="11" cy="11" r="9"/><path d="M11 5v6l4 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="#1a4f8b">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
             </span>
             <select name="horario" required>
                 <option value="">Horario preferido</option>
