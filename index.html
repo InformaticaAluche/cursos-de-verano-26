@@ -43,64 +43,46 @@
         margin-bottom: 20px;
     }
 
-    /* ⭐ BOTONERA TRIPLE */
-    .botonera-triple {
+    /* ⭐ BOTONERA DOBLE */
+    .botonera-doble {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 12px;
-        margin: 0 auto;
-        width: 90%;
-        max-width: 500px;
+        gap: 30px;
+        margin: 10px auto 0 auto;
+        width: 100%;
     }
 
-    /* Botón izquierdo (corregido) */
-    .btn-info {
-        width: 140px; /* ⭐ ancho fijo */
+    /* Botón llamada */
+    .btn-call {
+        width: 65px;
+        height: 65px;
         background: white;
         color: #1a4f8b;
-        padding: 14px;
-        border-radius: 8px;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
         font-weight: bold;
-        text-align: center;
-        flex-shrink: 0; /* ⭐ evita que se comprima */
     }
 
-    /* Botón central */
-    .btn-call {
-        width: 55px;
-        height: 55px;
-        background: white;
-        color: #1a4f8b;
-        border-radius: 50%;
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        flex-shrink: 0;
-    }
-
-    /* Botón derecho */
+    /* Botón WhatsApp */
     .btn-w {
-        width: 55px;
-        height: 55px;
+        width: 65px;
+        height: 65px;
         background: #25D366;
-        color: white;
         border-radius: 50%;
-        font-size: 1.4rem;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        flex-shrink: 0;
     }
 
-    @media (max-width: 600px) {
-        .botonera-triple {
-            gap: 14px;
-        }
+    .icon-w {
+        width: 32px;
+        height: 32px;
     }
 
     /* ⭐ GRID RESPONSIVE */
@@ -211,11 +193,15 @@
     <h1>Cursos de Verano 2026</h1>
     <p class="subtitulo">Ofimática, Mecanografía y Diseño para niños y jóvenes</p>
 
-    <!-- ⭐ BOTONERA TRIPLE -->
-    <div class="botonera-triple">
-        <a href="#formulario" class="btn-info">Infórmate</a>
+    <!-- ⭐ BOTONERA DOBLE -->
+    <div class="botonera-doble">
         <a href="tel:+34TU_NUMERO" class="btn-call">📞</a>
-        <a href="https://wa.me/34TU_NUMERO?text=Hola,%20quiero%20información%20sobre%20los%20cursos%20de%20verano" class="btn-w">💬</a>
+
+        <a href="https://wa.me/34TU_NUMERO?text=Hola,%20quiero%20información%20sobre%20los%20cursos%20de%20verano" 
+           class="btn-w">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                 alt="WhatsApp" class="icon-w">
+        </a>
     </div>
 </header>
 
