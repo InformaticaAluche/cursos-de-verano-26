@@ -54,9 +54,9 @@
         max-width: 500px;
     }
 
-    /* Botón izquierdo */
+    /* Botón izquierdo (corregido) */
     .btn-info {
-        flex: 1;
+        width: 140px; /* ⭐ ancho fijo */
         background: white;
         color: #1a4f8b;
         padding: 14px;
@@ -64,6 +64,7 @@
         text-decoration: none;
         font-weight: bold;
         text-align: center;
+        flex-shrink: 0; /* ⭐ evita que se comprima */
     }
 
     /* Botón central */
@@ -78,6 +79,7 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        flex-shrink: 0;
     }
 
     /* Botón derecho */
@@ -92,6 +94,7 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        flex-shrink: 0;
     }
 
     @media (max-width: 600px) {
