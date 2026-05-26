@@ -9,6 +9,8 @@
     /* ⭐ Corrección global: evita scroll lateral */
     html, body {
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     * {
@@ -18,8 +20,6 @@
     body {
         font-family: Arial, sans-serif;
         background: #f0f6ff;
-        margin: 0;
-        padding: 0;
         color: #1a4f8b;
         text-align: center;
         scroll-behavior: smooth;
@@ -27,10 +27,15 @@
 
     /* ⭐ HEADER CON DEGRADADO */
     header {
-        padding: 40px 20px;
+        padding: 60px 20px;
+        min-height: 260px;
         background: linear-gradient(135deg, #007bff 0%, #00e676 50%, #ffeb3b 100%);
         color: white;
         border-radius: 0 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden; /* ⭐ evita desbordes */
     }
 
     h1 {
@@ -68,12 +73,14 @@
         }
     }
 
-    /* ⭐ GRID RESPONSIVE */
+    /* ⭐ GRID RESPONSIVE CORREGIDO */
     .grid-cursos {
         display: grid;
         gap: 20px;
-        margin: 10px auto;
+        margin: 20px auto;
+        width: 100%; /* ⭐ evita cortes */
         max-width: 1200px;
+        padding: 0 10px; /* ⭐ margen interno seguro */
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -86,12 +93,20 @@
     @media (max-width: 600px) {
         .grid-cursos {
             grid-template-columns: 1fr;
-            margin: 5px auto;
         }
     }
 
+    .curso {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 100%; /* ⭐ evita desbordes */
+    }
+
     .grid-cursos img {
-        max-width: 180px;
+        max-width: 160px;
+        width: 100%;
         margin: 0 auto;
         display: block;
     }
@@ -173,28 +188,28 @@
 <!-- ⭐ TARJETAS DE CURSOS -->
 <div class="grid-cursos">
 
-    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    <div class="curso">
         <img src="images/ofimatica.png" alt="Ofimática Educativa">
         <h3>Ofimática Educativa</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>Word, PowerPoint y herramientas básicas para trabajos escolares.</p>
     </div>
 
-    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    <div class="curso">
         <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
         <h3>Mecanografía en Ordenador</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>Escritura rápida y correcta sin mirar el teclado.</p>
     </div>
 
-    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    <div class="curso">
         <img src="images/ofimatica_meca.png" alt="Ofimática + Mecanografía">
         <h3>Ofimática + Mecanografía</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
         <p>El pack más completo para avanzar en autonomía digital.</p>
     </div>
 
-    <div class="curso" style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    <div class="curso">
         <img src="images/ofimatica_canva.png" alt="Diseño Canva y PowerPoint">
         <h3>Diseño Canva / PowerPoint</h3>
         <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
@@ -211,3 +226,56 @@
     <div class="form-grid">
 
         <div class="form-item">
+            <input type="text" name="nombre" placeholder="Nombre del alumno" required>
+        </div>
+
+        <div class="form-item">
+            <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
+        </div>
+
+        <div class="form-item">
+            <input type="email" name="email" placeholder="Email del padre/madre" required>
+        </div>
+
+        <div class="form-item">
+            <select name="curso" required>
+                <option value="">Curso de interés</option>
+                <option value="Ofimática Educativa">Ofimática Educativa</option>
+                <option value="Mecanografía">Mecanografía</option>
+                <option value="Ofimática + Mecanografía">Ofimática + Mecanografía</option>
+                <option value="Diseño Canva/PowerPoint">Diseño Canva/PowerPoint</option>
+            </select>
+        </div>
+
+        <div class="form-item form-grid-full">
+            <select name="horario" required>
+                <option value="">Horario preferido</option>
+                <option value="Mañanas">Mañanas</option>
+                <option value="Tardes">Tardes</option>
+                <option value="Sábados por la mañana">Sábados por la mañana</option>
+            </select>
+        </div>
+
+        <div class="form-grid-full">
+            <label style="font-size:0.85rem; line-height:1.3;">
+                <input type="checkbox" name="consentimiento" required>
+                Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
+            </label>
+        </div>
+
+        <div class="form-grid-full">
+            <button type="submit">Enviar solicitud</button>
+        </div>
+
+    </div>
+</form>
+
+<footer style="text-align:center; padding:20px; margin-top:40px; font-size:0.85rem; color:#555;">
+    <a href="https://www.informaticaaluche.com/accesibilidad/">Accesibilidad</a>
+    <a href="https://www.informaticaaluche.com/aviso-legal/">Aviso legal</a>
+    <a href="https://www.informaticaaluche.com/politica-privacidad/">Política de privacidad</a>
+    <a href="https://www.informaticaaluche.com/politica-de-cookies/">Política de cookies</a>
+</footer>
+
+</body>
+</html>
