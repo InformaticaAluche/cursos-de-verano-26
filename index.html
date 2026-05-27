@@ -1,286 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursos de Verano – Informática Aluche</title>
-
-<style>
-    html, body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background: #f0f6ff;
-        color: #1a4f8b;
-        text-align: center;
-        scroll-behavior: smooth;
-    }
-
-    /* HEADER */
-    header {
-        padding: 60px 20px 40px 20px;
-        background: linear-gradient(135deg, #007bff 0%, #00e676 50%, #ffeb3b 100%);
-        color: white;
-        border-radius: 0 0 20px 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    p.subtitulo {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-    }
-
-    /* BOTONERA */
-    .botonera-doble {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin-top: 10px;
-    }
-
-    .btn-call {
-        width: 65px;
-        height: 65px;
-        background: white;
-        color: #1a4f8b;
-        border-radius: 50%;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-    }
-
-    .btn-w {
-        width: 65px;
-        height: 65px;
-        background: #25D366;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-    }
-
-    .icon-w {
-        width: 32px;
-        height: 32px;
-    }
-
-    /* IMÁGENES IGUALES */
-    .curso img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        object-position: center;
-        border: 3px solid #1a4f8b;
-        border-radius: 12px;
-        padding: 3px;
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-    }
-
-    /* GRID */
-    .grid-cursos {
-        display: grid;
-        gap: 20px;
-        margin: 20px auto;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 10px;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (max-width: 900px) {
-        .grid-cursos { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-        .grid-cursos { grid-template-columns: 1fr; }
-    }
-
-    .curso {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    /* FORMULARIO */
-    .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .form-grid-full {
-        grid-column: span 2;
-    }
-
-    form {
-        background: white;
-        padding: 25px;
-        margin: 0 auto;
-        width: 90%;
-        max-width: 500px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        text-align: left;
-    }
-
-    .form-item input,
-    .form-item select {
-        width: 100%;
-        padding: 12px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
-
-    button {
-        background: #1a4f8b;
-        color: white;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        padding: 12px;
-        border-radius: 6px;
-        margin-top: 10px;
-    }
-
-    button:hover {
-        background: #163f70;
-    }
-
-    footer a {
-        color: #1a4f8b;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos de Verano – Informática Aluche</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Cursos de Verano 2026</h1>
-    <p class="subtitulo">Ofimática, Mecanografía y Diseño para chicos y chicas de 9 a 16 años
+  <!-- HEADER -->
+  <header style="text-align:center; padding:25px 15px;">
+    <h1 style="margin-bottom:10px;">Cursos de Verano 2026</h1>
+    <p style="font-size:1.1rem; opacity:0.85;">
+      Ofimática · Mecanografía · Diseño · Habilidades digitales
+    </p>
+  </header>
 
-</p>
-
-    <div class="botonera-doble">
-        <a href="tel:+34TU_NUMERO" class="btn-call">📞</a>
-
-        <a href="https://wa.me/34TU_NUMERO?text=Hola,%20quiero%20información%20sobre%20los%20cursos%20de%20verano" 
-           class="btn-w">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                 alt="WhatsApp" class="icon-w">
-        </a>
-    </div>
-</header>
-
-<div class="grid-cursos">
-
-    <div class="curso">
-        <img src="images/ofimatica.png" alt="Ofimática Educativa">
-        <h3>Ofimática Educativa</h3>
-        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
-        <p>Ofimática práctica para trabajos del cole e instituto </p>
+  <!-- TARJETAS -->
+  <section class="tarjetas" style="max-width:900px; margin:auto; padding:10px;">
+    
+    <div class="tarjeta">
+      <img src="img/ofimatica.jpg" alt="Curso de ofimática para jóvenes en Madrid">
+      <h3>Ofimática Educativa</h3>
+      <p>Ofimática práctica para trabajos del cole e instituto</p>
     </div>
 
-    <div class="curso">
-        <img src="images/mecasoft.png" alt="Mecanografía en ordenador">
-        <h3>Mecanografía en Ordenador</h3>
-        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
-        <p>Escritura rápida para hacer tareas en menos tiempo</p>
+    <div class="tarjeta">
+      <img src="img/mecanografia.jpg" alt="Curso de mecanografía para jóvenes en Madrid">
+      <h3>Mecanografía</h3>
+      <p>Escritura rápida y precisa para trabajos escolares</p>
     </div>
 
-    <div class="curso">
-        <img src="images/ofimatica_meca.png" alt="Ofimática + Mecanografía">
-        <h3>Ofimática + Mecanografía</h3>
-        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
-        <p>Pack completo para avanzar en tareas y trabajos escolares</p>
+    <div class="tarjeta">
+      <img src="img/diseno.jpg" alt="Curso de diseño digital para jóvenes en Madrid">
+      <h3>Diseño Digital</h3>
+      <p>Presentaciones y creatividad para proyectos del cole</p>
     </div>
 
-    <div class="curso">
-        <img src="images/canva-power.jpg" alt="Diseño Canva y PowerPoint">
-        <h3>Diseño Canva / PowerPoint</h3>
-        <p style="color:#1a4f8b; font-weight:bold;">199 € · 20 h</p>
-        <p>Diseños creativos para destacar en trabajos escolares</p>
+    <div class="tarjeta">
+      <img src="img/combinado.jpg" alt="Curso combinado de informática para jóvenes en Madrid">
+      <h3>Pack Completo</h3>
+      <p>Ofimática + Mecanografía + Diseño</p>
     </div>
 
-</div>
+  </section>
 
-<form id="formulario" action="https://api.staticforms.dev/submit" method="POST">
-    <input type="hidden" name="apiKey" value="sf_9e534b99d00be1117c17d81c">
-    <input type="hidden" name="redirectTo" value="https://informaticaaluche.github.io/cursos-de-verano-26/gracias.html">
+  <!-- FORMULARIO -->
+  <section style="max-width:900px; margin:40px auto; padding:10px;">
+    <h2 style="text-align:center; margin-bottom:20px;">Reserva tu plaza</h2>
 
-    <div class="form-grid">
+    <iframe 
+      src="https://tu-formulario-aqui" 
+      style="width:100%; height:650px; border:none;">
+    </iframe>
+  </section>
 
-        <div class="form-item">
-            <input type="text" name="nombre" placeholder="Nombre del alumno" required>
-        </div>
+  <!-- ⭐ BLOQUE DE HORARIOS ADAPTADO A TU LANDING -->
+  <div style="text-align:center; margin-top:28px; margin-bottom:10px;">
+    <h3 style="font-size:1.2rem; margin-bottom:6px; font-weight:600;">
+      Horarios disponibles
+    </h3>
+    <p style="font-size:1rem; margin:0; opacity:0.85;">
+      Mañanas · Tardes · Sábados por la mañana
+    </p>
+  </div>
 
-        <div class="form-item">
-            <input type="tel" name="telefono" placeholder="Teléfono del padre/madre" required>
-        </div>
-
-        <div class="form-item">
-            <input type="email" name="email" placeholder="Email del padre/madre" required>
-        </div>
-
-        <div class="form-item">
-            <select name="curso" required>
-                <option value="">Curso de interés</option>
-                <option value="Ofimática Educativa">Ofimática Educativa</option>
-                <option value="Mecanografía">Mecanografía</option>
-                <option value="Ofimática + Mecanografía">Ofimática + Mecanografía</option>
-                <option value="Diseño Canva/PowerPoint">Diseño Canva/PowerPoint</option>
-            </select>
-        </div>
-
-        <div class="form-item form-grid-full">
-            <select name="horario" required>
-                <option value="">Horario preferido</option>
-                <option value="Mañanas">Mañanas</option>
-                <option value="Tardes">Tardes</option>
-                <option value="Sábados por la mañana">Sábados por la mañana</option>
-            </select>
-        </div>
-
-        <div class="form-grid-full">
-            <label style="font-size:0.85rem; line-height:1.3;">
-                <input type="checkbox" name="consentimiento" required>
-                Acepto el tratamiento de mis datos personales para recibir información sobre los cursos.
-            </label>
-        </div>
-
-        <div class="form-grid-full">
-            <button type="submit">Enviar solicitud</button>
-        </div>
-
-    </div>
-</form>
-
-<footer style="text-align:center; padding:20px; margin-top:40px; font-size:0.85rem; color:#555;">
-    <a href="https://www.informaticaaluche.com/accesibilidad/">Accesibilidad</a>
-    <a href="https://www.informaticaaluche.com/aviso-legal/">Aviso legal</a>
-    <a href="https://www.informaticaaluche.com/politica-privacidad/">Política de privacidad</a>
-    <a href="https://www.informaticaaluche.com/politica-de-cookies/">Política de cookies</a>
-</footer>
+  <!-- FOOTER -->
+  <footer style="text-align:center; padding:25px 10px; opacity:0.7;">
+    Informática Aluche · Madrid  
+  </footer>
 
 </body>
 </html>
