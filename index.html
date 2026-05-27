@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursos de Verano – Informática Aluche</title>
+  <title>Cursos de Verano 2026</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header style="text-align:center; padding:25px 15px;">
-    <h1 style="margin-bottom:10px;">Cursos de Verano 2026</h1>
-    <p style="font-size:1.1rem; opacity:0.85;">
-      Ofimática · Mecanografía · Diseño · Habilidades digitales
-    </p>
+  <header>
+    <h1>Cursos de Verano 2026</h1>
+    <p>Ofimática · Mecanografía · Diseño · Habilidades digitales</p>
   </header>
 
-  <!-- TARJETAS -->
-  <section class="tarjetas" style="max-width:900px; margin:auto; padding:10px;">
-    
+  <section class="tarjetas">
+
     <div class="tarjeta">
       <img src="img/ofimatica.jpg" alt="Curso de ofimática para jóvenes en Madrid">
       <h3>Ofimática Educativa</h3>
@@ -46,27 +42,19 @@
 
   </section>
 
-  <!-- FORMULARIO STATICFORMS (versión buena) -->
-  <section style="max-width:900px; margin:40px auto; padding:10px;">
-    <h2 style="text-align:center; margin-bottom:20px;">Reserva tu plaza</h2>
+  <section class="formulario">
+    <h2>Reserva tu plaza</h2>
 
-    <form action="https://api.staticforms.xyz/submit" method="post" style="max-width:600px; margin:auto;">
-      
+    <form action="https://api.staticforms.xyz/submit" method="post">
+
       <input type="hidden" name="accessKey" value="sf_9e534b99d00be1117c17d81c">
 
-      <input type="text" name="name" placeholder="Nombre del alumno" required 
-             style="width:100%; padding:12px; margin-bottom:12px;">
+      <input type="text" name="name" placeholder="Nombre del alumno" required>
+      <input type="text" name="parent" placeholder="Nombre del padre/madre" required>
+      <input type="tel" name="phone" placeholder="Teléfono" required>
+      <input type="email" name="email" placeholder="Email" required>
 
-      <input type="text" name="parent" placeholder="Nombre del padre/madre" required 
-             style="width:100%; padding:12px; margin-bottom:12px;">
-
-      <input type="tel" name="phone" placeholder="Teléfono" required 
-             style="width:100%; padding:12px; margin-bottom:12px;">
-
-      <input type="email" name="email" placeholder="Email" required 
-             style="width:100%; padding:12px; margin-bottom:12px;">
-
-      <select name="curso" required style="width:100%; padding:12px; margin-bottom:12px;">
+      <select name="curso" required>
         <option value="">Selecciona un curso</option>
         <option value="Ofimática">Ofimática</option>
         <option value="Mecanografía">Mecanografía</option>
@@ -74,23 +62,14 @@
         <option value="Pack Completo">Pack Completo</option>
       </select>
 
-      <button type="submit" 
-              style="width:100%; padding:14px; background:#0078ff; color:white; border:none; border-radius:6px; font-size:1rem;">
-        Enviar solicitud
-      </button>
-
+      <button type="submit">Enviar solicitud</button>
     </form>
 
-    <!-- TEXTO DEBAJO (versión buena) -->
-    <p style="text-align:center; margin-top:25px; opacity:0.75;">
-      Información: Alcalá · Madrid
-    </p>
-
+    <p class="info">Información: Alcalá · Madrid</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer style="text-align:center; padding:25px 10px; opacity:0.7;">
-    Informática Aluche · Madrid  
+  <footer>
+    Informática Aluche · Madrid
   </footer>
 
 </body>
