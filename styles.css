@@ -134,3 +134,10 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+header {
+  background: linear-gradient(135deg, #007bff, #00c6ff) !important;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
