@@ -46,7 +46,6 @@
     <h2>Reserva tu plaza</h2>
 
     <form action="https://api.staticforms.xyz/submit" method="post">
-
       <input type="hidden" name="accessKey" value="sf_9e534b99d00be1117c17d81c">
 
       <input type="text" name="name" placeholder="Nombre del alumno" required>
@@ -62,11 +61,13 @@
         <option value="Pack Completo">Pack Completo</option>
       </select>
 
-      <label style="font-size: 0.9rem; display: flex; gap: 8px; align-items: flex-start;">
-  <input type="checkbox" name="privacy" required>
-  <span>He leído y acepto la <a href="/politica-de-privacidad" target="_blank">Política de privacidad</a>.</span>
-</label>
-
+      <label class="check-legal">
+        <input type="checkbox" name="privacy" required>
+        <span>
+          He leído y acepto la
+          <a href="/politica-de-privacidad" target="_blank">Política de privacidad</a>.
+        </span>
+      </label>
 
       <button type="submit">Enviar solicitud</button>
     </form>
@@ -75,17 +76,15 @@
   </section>
 
   <footer>
-    Informática Aluche · Madrid
+    <div class="footer-legal">
+      <span>© 2026 Informática Aluche</span>
+      <span class="footer-links">
+        <a href="/aviso-legal" target="_blank">Aviso legal</a> ·
+        <a href="/politica-de-privacidad" target="_blank">Política de privacidad</a> ·
+        <a href="/politica-de-cookies" target="_blank">Política de cookies</a>
+      </span>
+    </div>
   </footer>
-<footer>
-  <div style="text-align:center; font-size: 0.9rem; color:#555;">
-    <a href="/aviso-legal" style="color:#555; text-decoration:none;">Aviso legal</a> ·
-    <a href="/politica-de-privacidad" style="color:#555; text-decoration:none;">Política de privacidad</a> ·
-    <a href="/politica-de-cookies" style="color:#555; text-decoration:none;">Política de cookies</a>
-    <br>
-    © 2026 Informática Aluche
-  </div>
-</footer>
 
 </body>
 </html>
