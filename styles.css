@@ -1,34 +1,33 @@
-/* GENERALES */
-
+/* GENERAL */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f7fa;
+  background: #f5f5f5;
   color: #333;
 }
 
-/* HEADER */
-
+/* HEADER AZUL ORIGINAL */
 header {
+  background: #1e73be; /* azul original */
+  color: white;
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  color: white;
 }
 
 header p {
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #e8f1ff; /* blanco suave */
 }
 
 /* TARJETAS */
-
 .tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -40,46 +39,40 @@ header p {
 
 .tarjeta {
   background: white;
+  border: 1px solid #ddd;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.tarjeta:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .tarjeta img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
   border-radius: 10px;
+  border: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
 .tarjeta h3 {
   margin: 10px 0 5px;
   font-size: 1.2rem;
+  color: #333;
+}
+
+.precio {
+  font-weight: bold;
   color: #007bff;
+  margin-top: 8px;
 }
 
 /* FORMULARIO */
-
 .formulario {
   background: white;
   padding: 40px 20px;
   max-width: 600px;
   margin: 40px auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.formulario h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007bff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 form {
@@ -104,13 +97,9 @@ button {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-button:hover {
-  background: #005fcc;
-}
-
+/* CHECKBOX LEGAL */
 .check-legal {
   font-size: 0.9rem;
   display: flex;
@@ -118,46 +107,11 @@ button:hover {
   align-items: flex-start;
 }
 
-.check-legal input {
-  margin-top: 3px;
-}
-
-.check-legal a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.check-legal a:hover {
-  text-decoration: underline;
-}
-
-.info {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* FOOTER */
-
+/* FOOTER ORIGINAL */
 footer {
-  background: #f0f0f0;
-  padding: 15px 10px;
-}
-
-.footer-legal {
-  max-width: 1100px;
-  margin: auto;
   text-align: center;
+  padding: 20px;
+  background: white;
+  color: #555;
   font-size: 0.9rem;
-  color: #555;
-}
-
-.footer-links a {
-  color: #555;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
 }
