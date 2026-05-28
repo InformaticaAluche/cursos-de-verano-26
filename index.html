@@ -49,31 +49,41 @@
   </section>
 
   <section class="formulario">
-    <h2>Reserva tu plaza</h2>
+  <h2>Reserva tu plaza</h2>
 
-    <form action="https://api.staticforms.xyz/submit" method="post">
-      <input type="hidden" name="accessKey" value="sf_9e534b99d00be1117c17d81c">
+  <form action="https://api.staticforms.xyz/submit" method="post">
+    <input type="hidden" name="accessKey" value="sf_9e534b99d00be1117c17d81c">
 
-      <input type="text" name="name" placeholder="Nombre del alumno" required>
-      <input type="text" name="parent" placeholder="Nombre del padre/madre" required>
-      <input type="tel" name="phone" placeholder="Teléfono" required>
-      <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="name" placeholder="Nombre del alumno" required>
+    <input type="text" name="parent" placeholder="Nombre del padre/madre" required>
+    <input type="tel" name="phone" placeholder="Teléfono" required>
+    <input type="email" name="email" placeholder="Email" required>
 
-      <select name="curso" required>
-        <option value="">Selecciona un curso</option>
-        <option value="Ofimática">Ofimática</option>
-        <option value="Mecanografía">Mecanografía</option>
-        <option value="Diseño Digital">Diseño Digital</option>
-        <option value="Pack Completo">Pack Completo</option>
-      </select>
+    <!-- CURSOS CORRECTOS -->
+    <select name="curso" required>
+      <option value="">Selecciona un curso</option>
+      <option value="Ofimática educativa">Ofimática educativa</option>
+      <option value="Mecanografía">Mecanografía</option>
+      <option value="Ofimática + Mecanografía">Ofimática + Mecanografía</option>
+      <option value="Canva + PowerPoint">Canva + PowerPoint</option>
+    </select>
 
-      <label class="check-legal">
-        <input type="checkbox" name="privacy" required>
-        <span>He leído y acepto la Política de privacidad.</span>
-      </label>
+    <!-- HORARIO (FILA NUEVA) -->
+    <select name="horario" required>
+      <option value="">Selecciona un horario</option>
+      <option value="Mañanas">Mañanas</option>
+      <option value="Tardes">Tardes</option>
+      <option value="Sábados por la mañana">Sábados por la mañana</option>
+    </select>
 
-      <button type="submit">Enviar solicitud</button>
-    </form>
+    <label class="check-legal">
+      <input type="checkbox" name="privacy" required>
+      <span>He leído y acepto la Política de privacidad.</span>
+    </label>
+
+    <button type="submit">Enviar solicitud</button>
+  </form>
+</section>
 
   </section>
 
