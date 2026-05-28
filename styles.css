@@ -9,7 +9,7 @@ body {
 
 /* HEADER AZUL ORIGINAL */
 header {
-  background: #1e73be; /* azul original */
+  background: #1e73be;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -24,7 +24,7 @@ header h1 {
 header p {
   margin-top: 10px;
   font-size: 1rem;
-  color: #e8f1ff; /* blanco suave */
+  color: #e8f1ff;
 }
 
 /* TARJETAS */
@@ -46,14 +46,14 @@ header p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* IMÁGENES OPTIMIZADAS (MISMA ALTURA + BORDE GORDO + SIN DOBLE BORDE) */
+/* IMÁGENES OPTIMIZADAS */
 .tarjeta img {
   width: 100%;
-  height: 180px;          /* todas iguales */
-  object-fit: cover;      /* recorta sin deformar */
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
-  border: 3px solid #ccc; /* borde más gordo */
-  background: white;      /* elimina doble borde */
+  border: 3px solid #ccc;
+  background: white;
   margin-bottom: 10px;
 }
 
@@ -111,11 +111,29 @@ button {
   align-items: flex-start;
 }
 
-/* FOOTER ORIGINAL */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background: white;
   color: #555;
   font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive footer */
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
 }
