@@ -136,4 +136,33 @@ footer a:hover {
     font-size: 0.85rem;
     line-height: 1.5;
   }
+.botones-contacto-header {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-llamar-header,
+.btn-whatsapp-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.btn-llamar-header {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.btn-whatsapp-header {
+  background: #25D366;
+}
+
+  
 }
