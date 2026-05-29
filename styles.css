@@ -191,6 +191,35 @@ footer a:hover {
 .icono-circular svg {
   pointer-events: none;
 }
+.botones-contacto-header {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 28px; /* más separación en PC */
+}
+
+.icono-circular {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 3px solid rgba(255, 255, 255, 0.6); /* borde blanco para PC */
+}
+
+.icono-telefono {
+  background: #4da3ff; /* azul claro */
+}
+
+.icono-whatsapp {
+  background: #25D366; /* verde WhatsApp */
+}
+
+.icono-circular svg {
+  pointer-events: none;
+}
 
   
 }
