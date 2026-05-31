@@ -223,6 +223,18 @@ footer a:hover {
 body {
   background: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
 }
+.logo-final {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.logo-final img {
+  width: 140px;        /* tamaño más pequeño */
+  display: block;      /* evita alineación rara */
+  margin: 0 auto;      /* centra la imagen */
+  padding: 0;          /* elimina espacio extra */
+  object-fit: contain; /* ajusta sin deformar */
+}
 
   
 }
