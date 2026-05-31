@@ -229,11 +229,12 @@ body {
 }
 
 .logo-final img {
-  width: 140px;        /* tamaño más pequeño */
-  display: block;      /* evita alineación rara */
-  margin: 0 auto;      /* centra la imagen */
-  padding: 0;          /* elimina espacio extra */
-  object-fit: contain; /* ajusta sin deformar */
+  background: white;
+  border-radius: 6px;
+  padding: 6px;
+  width: 120px
+}
+
 }
 
   
